@@ -1,0 +1,1 @@
+web: gunicorn gsm_data_part1.wsgi
