@@ -7,7 +7,9 @@ from rest_framework.response import Response
 from django.http import HttpResponse
 # Create your views here.
 def Hello(request):
-    return HttpResponse("HELLO WORLD")
+    data= GSM.objects.last()
+    context={"data":data}
+    return render(request,"home.py.html",context)
 
 
 class GSMViewSet(viewsets.ModelViewSet):
